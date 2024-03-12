@@ -161,18 +161,18 @@ with col2:
 # Resdondendo perguntas 
 col1, col2, col3 = st.columns([1.2, 1, 1])
 
-col1.metric("# Maior quantidade de avaliações registrada", (df1.loc[:, ['votes', 'country_name'] ]                                                                                                      .groupby('country_name')
+col1.metric("Maior quantidade de avaliações registrada", (df1.loc[:, ['votes', 'country_name'] ]                                                                                                      .groupby('country_name')
                                                                .mean()
                                                                .sort_values('votes', ascending=False)
                                                                .reset_index()).iloc[0, 0],)
 
-col2.metric("### País a maior nota média registrada", (df1.loc[:, ['aggregate_rating', 'country_name'] ]
+col2.metric("País a maior nota média registrada", (df1.loc[:, ['aggregate_rating', 'country_name'] ]
                                                           .groupby('country_name')
                                                           .mean()
                                                           .sort_values('aggregate_rating', ascending=False)
                                                           .reset_index()).iloc[0, 0],)
 
-col3.metric("### País com menor média de notas", (df1.loc[:, ['aggregate_rating', 'country_name'] ]
+col3.metric("País com menor média de notas", (df1.loc[:, ['aggregate_rating', 'country_name'] ]
                                                                                  .groupby('country_name')
                                                                                  .mean()
                                                                                  .sort_values('aggregate_rating', ascending=True)
