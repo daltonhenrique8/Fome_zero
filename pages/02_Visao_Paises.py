@@ -181,7 +181,7 @@ col3.metric("País com menor média de notas", (df1.loc[:, ['aggregate_rating', 
 #-------------------------------------------------------------------------------------------------------------------------------------
 
 
-media_custo_por_pais = df_filtered.groupby('country_name')['average_cost_for_two'].mean().reset_index().head(1)
+media_custo_por_pais = df_filtered.groupby('country_name')['average_cost_for_two'].mean().reset_index().head(20)
 
 # Renomear as colunas para melhor entendimento
 media_custo_por_pais.columns = ['country_name', 'average_cost_for_two']
