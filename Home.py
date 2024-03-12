@@ -152,17 +152,17 @@ st.markdown("### Temos as seguintes marcas dentro da nossa plataforma:")
 col1, col2, col3, col4, col5 = st.columns([1, 1, 1, 2, 1])
 #col1, col2, col3, col4, col5 = st.columns(5)
     #restaurants, countries, cities, ratings, cuisines
-col1.metric("### Restaurantes Cadastrados", df1['restaurant_id'].nunique(),)
+col1.metric("Restaurantes Cadastrados", df1['restaurant_id'].nunique(),)
 
-col2.metric("### Países Cadastrados", df1['country_name'].nunique(),)
+col2.metric("Países Cadastrados", df1['country_name'].nunique(),)
 
-col3.metric("### Cidades Cadastrados", df1['city'].nunique(),)
+col3.metric("Cidades Cadastrados", df1['city'].nunique(),)
 
 total_avaliacoes = df1['votes'].sum()
 total_avaliacoes_formatado = "{:,}".format(total_avaliacoes).replace(",", ".")
 col4.metric("Avaliações Feitas na Plataforma", total_avaliacoes_formatado,)
 
-col5.metric("### Tipos de Culinárias Oferecidas", df1['cuisines'].nunique(),)
+col5.metric("Tipos de Culinárias Oferecidas", df1['cuisines'].nunique(),)
 
 
 #Fazendo o mapa com base na função create_map
