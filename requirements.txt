@@ -4,3 +4,5 @@ folium==0.13.0
 streamlit==1.15.2
 streamlit-folium==0.7.0
 inflection==0.5.1
+numpy==1.21.0
+altair==4.2.2
